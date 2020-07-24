@@ -106,9 +106,19 @@ class SortingRobot:
 #   * You may NOT use any Python libraries or class methods. (`sorted()`, etc.)
 #   * You may define robot helper methods, as long as they follow all the rules.
 
-#from start compare each number with held number and swap if you find a larger number (meaning held number should be to left)
+# from start compare each number with held number and swap if you find a larger number (meaning held number should be to left)
 # *0* 3 1 9 6 2 --> 0 *3* 1 9 6 2--> 0 1 *3* 9 6 2 --> 0 1 3 *9* 6 2 -->  0 1 3 6 *9* 2 --> 0 1 3 6 2 *9*
 # 0 1 3 6 2 *9* --> *0* 1 3 6 2 9 --> ... --> 0 1 3 2 *6* 9 --> ... --> 0 1 2 *3* 6 9
+        
+#light on = true and light on = false -- can't set temp value, use on/off
+#compare_item method defines greater and less than with 1 and -1 -- use this to determine if swap
+#can_move methods determine if at start or end of list  
+
+# start at start by making the first spot none and turn light True
+# if it's True, move up and turn it False: compare with next number, swap if smaller, keep moving
+#if it can't keep moving, do a last swap if held value is larger
+# if it's False, move left and sawp      
+        
         pass
 
 if __name__ == "__main__":
