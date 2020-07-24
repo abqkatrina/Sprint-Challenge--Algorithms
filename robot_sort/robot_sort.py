@@ -96,9 +96,20 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+#   * You may use any pre-defined robot methods.
+#   * You may NOT modify any pre-defined robot methods.
+#   * You may use logical operators. (`if`, `and`, `or`, `not`, etc.)
+#   * You may use comparison operators. (`>`, `>=`, `<`, `<=`, `==`, `is`, etc.)
+#   * You may use iterators. (`while`, `for`, `break`, `continue`)
+#   * You may NOT store any variables. (`=`)
+#   * You may NOT access any instance variables directly. (`self._anything`)
+#   * You may NOT use any Python libraries or class methods. (`sorted()`, etc.)
+#   * You may define robot helper methods, as long as they follow all the rules.
 
+#from start compare each number with held number and swap if you find a larger number (meaning held number should be to left)
+# *0* 3 1 9 6 2 --> 0 *3* 1 9 6 2--> 0 1 *3* 9 6 2 --> 0 1 3 *9* 6 2 -->  0 1 3 6 *9* 2 --> 0 1 3 6 2 *9*
+# 0 1 3 6 2 *9* --> *0* 1 3 6 2 9 --> ... --> 0 1 3 2 *6* 9 --> ... --> 0 1 2 *3* 6 9
+        pass
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
