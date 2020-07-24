@@ -29,6 +29,9 @@ c)
       if bunnies == 0:
         return 0
       return 2 + bunnyEars(bunnies-1) -->
+this is recursive, so repeats on itself until bunnies is 0
+that means it performs the operation as many times as the number of bunnies and returns one number
+--> is this still linear?
 
 
 ## Exercise II
