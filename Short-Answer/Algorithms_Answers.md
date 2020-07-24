@@ -21,7 +21,7 @@ b)
         sum += 1 -->
 4:8 (2) --> 5:15 (3) +1(+1)--> 6:18 (4) +1(+1)
 with an increase of range, increase runs by equal amount
---> linear O(n)
+--> linearithmic O(n log n)
 
 
 c)
