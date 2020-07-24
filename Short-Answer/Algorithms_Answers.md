@@ -17,6 +17,9 @@ b)
       while j < n:
         j *= 2
         sum += 1 -->
+this is a loop on each item in a range
+number of operations increases exponentially with an increase in range
+--> exponential? O(c^n)
 
 
 
