@@ -109,18 +109,29 @@ class SortingRobot:
 # from start compare each number with held number and swap if you find a larger number (meaning held number should be to left)
 # *0* 3 1 9 6 2 --> 0 *3* 1 9 6 2--> 0 1 *3* 9 6 2 --> 0 1 3 *9* 6 2 -->  0 1 3 6 *9* 2 --> 0 1 3 6 2 *9*
 # 0 1 3 6 2 *9* --> *0* 1 3 6 2 9 --> ... --> 0 1 3 2 *6* 9 --> ... --> 0 1 2 *3* 6 9
-        
-#light on = true and light on = false -- can't set temp value, use on/off
-#compare_item method defines greater and less than with 1 and -1 -- use this to determine if swap
+
+#can't define current value to compare position
+#light on = true and light on = false -- can't set temp value, use on/off?
+#compare_item method defines greater and less than with 1 and -1 -- use this to determine if swap or nah
 #can_move methods determine if at start or end of list  
 
-# start at start by making the first spot none and turn light True
-# if it's True, move up and turn it False: compare with next number, swap if smaller, keep moving
 #if it can't keep moving, do a last swap if held value is larger
-# if it's False, move left and sawp      
-        
-        pass
+    
 
+# start at start by making the first spot none and turn light True
+        self.set_light_on()
+        self.swap_item()
+
+# if it's True, move up and turn it False: compare with next number, swap if smaller, keep moving
+        while self.light_is_on():
+            self.set_light_off()
+            self.move_right()
+
+# if it's False, move left and swap
+        while self.can_move_left():
+            self.move_left()
+        self.swap_item()
+#  
 if __name__ == "__main__":
     # Test our your implementation from the command line
     # with `python robot_sort.py`
