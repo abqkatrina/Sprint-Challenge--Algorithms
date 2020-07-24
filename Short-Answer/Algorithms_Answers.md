@@ -7,7 +7,9 @@ a)
     while (a < n * n * n):
       a = a + n * n -->
 simple operation, repeated while a is less than n^3
-number of operations per call increases equally with increase in n but not a --> linear? O(n)
+number of operations per call increases equally with increase in n but not a
+
+ --> linear O(n)
 
 
 b)
@@ -17,10 +19,9 @@ b)
       while j < n:
         j *= 2
         sum += 1 -->
-this is a loop on each item in a range
-number of operations increases exponentially with an increase in range
---> exponential? O(c^n)
-
+4:8 (2) --> 5:15 (3) +1(+1)--> 6:18 (4) +1(+1)
+with an increase of range, increase runs by equal amount
+--> linear O(n)
 
 
 c)
@@ -31,7 +32,8 @@ c)
       return 2 + bunnyEars(bunnies-1) -->
 this is recursive, so repeats on itself until bunnies is 0
 that means it performs the operation as many times as the number of bunnies and returns one number
---> is this still linear?
+
+--> linear O(n)
 
 
 ## Exercise II
