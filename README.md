@@ -28,11 +28,12 @@ This Sprint Challenge is split into two separate parts that test your ability to
 
 For this portion of the Sprint Challenge, you'll be answering questions posed in the `Algorithms_Questions.md` document inside the `Short-Answer` directory. Write down your answer and also write down a justification for _why_ you put down that answer. This could net you some partial credit if your justification is sound but the answer you put down turns out to not be correct. Add your answers to the questions in the `Algorithms_Answers.md` file.
 
-#### 1. Analyzing runtime _(3 points)_
+#### 1. Analyzing runtime _(3 points)_ [X]
 
-Given 3 blocks of code, identify the runtime of each. Justify your answer.
+Given 3 blocks of code, identify the runtime of each. Justify your answer. 
+<!-- not sure i did this correctly -->
 
-#### 2. Find the highest floor _(3 points)_
+#### 2. Find the highest floor _(3 points)_  [X]
 
 Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f. Devise a strategy to determine the value of f such that the number of dropped + broken eggs is minimized.
 
@@ -40,7 +41,7 @@ Write out your proposed algorithm in plain English or pseudocode AND give the ru
 
 ### Code Challenges
 
-#### 3. Use recursion to complete the `count_th()` function _(3 points)_
+#### 3. Use recursion to complete the `count_th()` function _(3 points)_  [X]
 Inside the `recursive_count_th` directory you'll find the `count_th.py` file. In this file, please add your recursive implementation to the `count_th()` method following these rules:
 
 * Your function should take in a signle parameter (a string `word`)

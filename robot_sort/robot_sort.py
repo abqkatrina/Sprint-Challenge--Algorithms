@@ -96,8 +96,63 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
-        # Fill this out
-        pass
+#   * You may use any pre-defined robot methods.
+#   * You may NOT modify any pre-defined robot methods.
+#   * You may use logical operators. (`if`, `and`, `or`, `not`, etc.)
+#   * You may use comparison operators. (`>`, `>=`, `<`, `<=`, `==`, `is`, etc.)
+#   * You may use iterators. (`while`, `for`, `break`, `continue`)
+#   * You may NOT store any variables. (`=`)
+#   * You may NOT access any instance variables directly. (`self._anything`)
+#   * You may NOT use any Python libraries or class methods. (`sorted()`, etc.)
+#   * You may define robot helper methods, as long as they follow all the rules.
+
+# from start compare each number with held number and swap if you find a larger number (meaning held number should be to left)
+# *0* 3 1 9 6 2 --> 0 *3* 1 9 6 2--> 0 1 *3* 9 6 2 --> 0 1 3 *9* 6 2 -->  0 1 3 6 *9* 2 --> 0 1 3 6 2 *9*
+# 0 1 3 6 2 *9* --> *0* 1 3 6 2 9 --> ... --> 0 1 3 2 *6* 9 --> ... --> 0 1 2 *3* 6 9
+
+#can't define current value to compare position
+#light on = true and light on = false -- can't set temp value, use on/off?
+#compare_item method defines greater and less than with 1 and -1 -- use this to determine if swap or nah
+#can_move methods determine if at start or end of list  
+
+    
+# can't access currently held value directly ---- use light state
+# compare can only tell difference between item and position
+    #use if 1/-1 as >/<
+# start at start by making the first spot none and turn light True
+        self.set_light_on()
+        self.swap_item()
+
+# if it's True, move up and turn it False
+        while self.light_is_on():
+            self.set_light_off()
+            self.move_right()
+
+    # compare with next number, swap if smaller, keep moving
+            #if there's another number, compare it to the first number; swap if it's lower or keep moving
+            while self.can_move_right():
+                if self.compare_item() == -1:
+                    self.swap_item()
+                self.move_right()
+
+    # if there's no further number and it's smaller, swap 
+            while self.can_move_left():
+                if self.can_move_right() == False and self.compare_item() == -1:
+                        self.swap_item()         
+                self.swap_item()
+
+        # if the current number is higher, swap and turn light on, else, move left
+                if self.compare_item() == 1:
+                    self.swap_item() 
+                    self.set_light_on() 
+
+                self.move_left()
+
+# if it's False, move left and swap
+        while self.can_move_left():
+            self.move_left()
+        self.swap_item()
+
 
 
 if __name__ == "__main__":
